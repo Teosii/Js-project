@@ -1,0 +1,229 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #050715;
+    min-height: 9vh;
+}
+.logo{
+    color: white;
+    text-transform: uppercase;
+    font-size: 30px;
+    letter-spacing: 5px;
+    margin-left: 100px;
+
+}
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    margin-left: 800px;
+}
+.nav-links li{
+    list-style: none;
+}
+.nav-links a{
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: white;
+}
+.nav-links li a:hover{
+    color: #5E3AD4;
+}
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+.hamburger div{
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+.gym-photo{
+    width:45%;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+.fit-title{
+    color: white;
+    font-size: 35px;
+    letter-spacing: 3px;
+    margin-left: 185px;
+    margin-top: 50px;
+}
+.fitness{
+     width: 45%;
+    height: 480px;
+    float: right;
+    margin-top: -483px;
+    background-color: #5E3AD4;
+    margin-right: 60px;
+
+}
+.paragraph{
+    color: white;
+    line-height: 30px;
+    font-size: 30px;
+    text-align: left;
+    padding:50px 50px 50px 100px;
+}
+.fit-title2{
+    color: white;
+    font-size: 35px;
+    letter-spacing: 3px;
+    margin-left: 185px;
+    margin-top: 50px;
+}
+.fitness2{
+    width: 45%;
+    height: 480px;
+    margin-top:-30px;
+    background-color: #5E3AD4;
+    margin-left: 50px;
+}
+.paragraph2{
+    color: white;
+    line-height: 30px;
+    font-size: 30px;
+    text-align: left;
+    padding:50px 50px 50px 100px;
+}
+.gym-photo2{
+    width:45%;
+    margin-top: -475px;
+    float: right;
+    margin-right: 60px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:1024px)  {
+    .nav-links{
+        width: 50%;
+    }
+}
+
+
+@media screen and (max-width:768px)  {
+    body{
+        overflow-y: scroll;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #050715;
+        transform: translateX(100%);
+        transition:transform 0.5s ease-in;
+        width: 40%;
+    }
+    .nav-links li{
+        opacity: 1;
+    }
+    .hamburger{
+        display: block;
+        margin-left:100px ;
+    }
+    .logo{
+        margin-right: 100px;
+    }
+    .gym-photo{
+        border: 1px solid blue;
+        margin-left:10px;
+        width: 55%;
+    }
+    .fitness{
+        /* border: 1px solid red; */
+        margin-top: 5px;
+        width: 80%;
+        height: 320px;
+        margin-right: 85px;
+    }
+    .paragraph{
+        width: 100%;
+        margin-left: -100px;
+        margin-top:-60px;
+        font-size: 21px;
+    }
+
+
+
+
+
+
+    .fit-title,.fit-title2,.fitness2,.gym-photo2{
+        display: none;
+    }
+
+}
+
+
+
+@keyframes navLinkFade{
+    from{
+        opacity:0;
+        transform:translateX(50px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0px);
+    }
+}
+.nav-active{
+    transform:translateX(0%)
+}
+
+.toggle .line1{
+    transform:rotate(-45deg) translate(-5px,6px);
+
+}
+.toggle .line2{
+    opacity:0;
+}
+
+.toggle .line3{
+    transform:rotate(45deg) translate(-5px,-6px);
+}

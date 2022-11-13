@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    background-color:#5E3AD4;
+
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #050715;
+    min-height: 9vh;
+}
+.logo{
+    color: white;
+    text-transform: uppercase;
+    font-size: 30px;
+    letter-spacing: 5px;
+    margin-left: 100px;
+}
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    margin-left: 800px;
+}
+.nav-links li{
+    list-style: none;
+}
+.nav-links a{
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: white;
+}
+.nav-links li a:hover{
+    color: #5E3AD4;
+}
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+.hamburger div{
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+.body-title{
+    color: white;
+    font-size: 40px;
+    font-weight: 500;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+.name{
+    color: white;
+}
+input{
+    display: block;
+    width: 35%;
+   height: 100%;
+   margin-top: 20px;
+   outline: none;
+    border: none;
+}
+.label-name{
+    color: white;
+    font-size: 18px;
+
+}
+.form-one{
+    margin-top: 100px;
+    margin-left: 100px;
+}
+.email{
+    width: 15%;
+}
+.two{
+    margin-left: 400px;
+    margin-top: -60px;
+}
+.phone{
+    width: 19%;
+}
+.submit{
+    background-color: #050715;
+    width: 100px;
+    height: 40px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    margin-left: 528px;
+    margin-top: 60px;
+}
+.info-section{
+    float: right;
+    margin-right: 220px;
+    margin-top: -320px;
+}
+.info{
+    color: white;
+    font-size: 30px;
+}
+.line-one{
+    margin-top: 50px;
+    border: 3px solid white;
+}
+.tel{
+    color: white;
+    font-weight: lighter;
+    opacity: 0.4;
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:1024px)  {
+    .nav-links{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:768px)  {
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #050715;
+        transform: translateX(100%);
+        transition:transform 0.5s ease-in;
+        width: 50%;
+    }
+    .nav-links li{
+        opacity: 1;
+    }
+    .hamburger{
+        display: block;
+        margin-left:100px ;
+    }
+    .logo{
+        margin-right: 100px;
+    }
+    .label-name{
+        margin-top: 50px;
+    }
+
+    .two{
+       margin-top: -150px;
+       margin-left: 100px;
+    }
+    
+    .body-section{
+        margin-top: -100px;
+        margin-left: -50px;
+    }
+    .body-title{
+        font-size: 40px;
+    }
+    .submit{
+        margin-left: 100px;
+    }
+    .info-section{
+       margin-right:200px;
+       margin-top: 50px;
+    }
+    .info{
+        font-size: 20px;
+    }
+    .line-one{
+        margin-top: 30px;
+    }
+    .tel{
+        font-size: 18px;
+    }
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity:0;
+        transform:translateX(50px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0px);
+    }
+}
+.nav-active{
+    transform:translateX(0%)
+}
+
+.toggle .line1{
+    transform:rotate(-45deg) translate(-5px,6px);
+
+}
+.toggle .line2{
+    opacity:0;
+}
+
+.toggle .line3{
+    transform:rotate(45deg) translate(-5px,-6px);
+}
